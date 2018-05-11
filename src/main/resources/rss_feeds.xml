@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://rss.cnn.com/~d/styles/itemcontent.css"?>
+<rss version="2.0" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" xmlns:media="http://search.yahoo.com/mrss/"><channel>
+    <title>CNN.com</title>
+    <link>http://www.cnn.com/?eref=rss_topstories</link>
+    <description>CNN.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.</description>
+    <language>en-us</language>
+    <copyright>© 2011 Cable News Network LP, LLLP.</copyright>
+    <pubDate>Thu, 14 Apr 2011 22:18:26 EDT</pubDate>
+    <ttl>5</ttl>
+    <image>
+        <title>CNN.com</title>
+        <link>http://www.cnn.com/?eref=rss_topstories</link>
+        <url>http://i2.cdn.turner.com/cnn/.element/img/1.0/logo/cnn.logo.rss.gif</url>
+        <width>144</width>
+        <height>33</height>
+        <description>CNN.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.</description>
+    </image>
+    <atom10:link href="http://rss.cnn.com/rss/cnn_topstories" rel="self" type="application/rss+xml" xmlns:atom10="http://www.w3.org/2005/Atom"/><feedburner:info uri="rss/cnn_topstories"/><atom10:link href="http://pubsubhubbub.appspot.com/" rel="hub" xmlns:atom10="http://www.w3.org/2005/Atom"/><thespringbox:skin xmlns:thespringbox="http://www.thespringbox.com/dtds/thespringbox-1.0.dtd">http://rss.cnn.com/rss/cnn_topstories?format=skin</thespringbox:skin><item>
+    <title>Allies declare Gadhafi 'must go, and go for good'</title>
+    <guid ispermalink="false">http://www.cnn.com/2011/US/04/14/gadhafi.op.ed/index.html?eref=rss_topstories</guid>
+    <link>http://rss.cnn.com/~r/rss/cnn_topstories/~3/yr-pF7vgdfU/index.html</link>
+    <description>In an op-ed to appear Friday in European newspapers, U.S. President Obama, French President Sarkozy and British Prime Minister Cameron write that "it is impossible to imagine a future for Libya with Qaddafi in power."&lt;div class="feedflare"&gt;
+        &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=yr-pF7vgdfU:oUBX_i45nso:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=yr-pF7vgdfU:oUBX_i45nso:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=yr-pF7vgdfU:oUBX_i45nso:V_sGLiPBpWU"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?i=yr-pF7vgdfU:oUBX_i45nso:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=yr-pF7vgdfU:oUBX_i45nso:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=yr-pF7vgdfU:oUBX_i45nso:gIN9vFwOqvQ"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?i=yr-pF7vgdfU:oUBX_i45nso:gIN9vFwOqvQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/rss/cnn_topstories/~4/yr-pF7vgdfU" height="1" width="1"/&gt;</description>
+    <pubDate>Thu, 14 Apr 2011 20:21:10 EDT</pubDate>
+    <feedburner:origLink>http://www.cnn.com/2011/US/04/14/gadhafi.op.ed/index.html?eref=rss_topstories</feedburner:origLink></item>
+    <item>
+        <title>Congress passes budget deal</title>
+        <guid ispermalink="false">http://www.cnn.com/2011/POLITICS/04/14/house.budget.vote/index.html?eref=rss_topstories</guid>
+        <link>http://rss.cnn.com/~r/rss/cnn_topstories/~3/YHCcgII4izU/index.html</link>
+        <description>The House and Senate approved a fiscal year 2011 budget deal reached last week by leaders of both parties, sending it to President Barack Obama for his signature.&lt;div class="feedflare"&gt;
+            &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=YHCcgII4izU:8j46nfNqG-k:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=YHCcgII4izU:8j46nfNqG-k:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=YHCcgII4izU:8j46nfNqG-k:V_sGLiPBpWU"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?i=YHCcgII4izU:8j46nfNqG-k:V_sGLiPBpWU" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=YHCcgII4izU:8j46nfNqG-k:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://rss.cnn.com/~ff/rss/cnn_topstories?a=YHCcgII4izU:8j46nfNqG-k:gIN9vFwOqvQ"&gt;&lt;img src="http://feeds.feedburner.com/~ff/rss/cnn_topstories?i=YHCcgII4izU:8j46nfNqG-k:gIN9vFwOqvQ" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+            &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/rss/cnn_topstories/~4/YHCcgII4izU" height="1" width="1"/&gt;</description>
+        <pubDate>Thu, 14 Apr 2011 21:21:34 EDT</pubDate>
+        <feedburner:origLink>http://www.cnn.com/2011/POLITICS/04/14/house.budget.vote/index.html?eref=rss_topstories</feedburner:origLink>
+    </item>
+    </channel></rss>
