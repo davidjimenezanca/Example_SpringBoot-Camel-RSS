@@ -14,8 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package camel;
+package camel.route;
 
+import camel.processor.CNNXmlProcessor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.rss.RssEndpoint;
 import org.springframework.stereotype.Component;
@@ -43,22 +44,24 @@ public class CNNRoutesBuilder extends RouteBuilder {
         from(endpointLatest).routeId("CNN:latest")
                             .streamCaching().threads(10)
                             .marshal().rss()
-                            .to("log:cnn_latest?showHeaders=false&showExchangePattern=false&showBodyType=false")
+                            .process(new CNNXmlProcessor())
+                            .to("log:cnn_latest")
                             .end();
 
         from(endpointTechnology).routeId("CNN:technology")
                                 .streamCaching().threads(5)
                                 .marshal().rss()
-                                .to("log:cnn_technology?showHeaders=false&showExchangePattern=false&showBodyType=false")
+                                .process(new CNNXmlProcessor())
+                                .to("log:cnn_technology")
                                 .end();
 
         from(endpointSport).routeId("CNN:sport")
                            .streamCaching().threads(5)
                            .marshal().rss()
-                           .to("log:cnn_sport?showHeaders=false&showExchangePattern=false&showBodyType=false")
+                           .process(new CNNXmlProcessor())
+                           .to("log:cnn_sport")
                            .end();
         // END SNIPPET: e1
-
     }
 
 }

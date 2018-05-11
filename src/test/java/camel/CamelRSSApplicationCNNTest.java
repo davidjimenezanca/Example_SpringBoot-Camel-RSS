@@ -22,6 +22,7 @@ import org.apache.camel.builder.NotifyBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.CamelSpringBootRunner;
 import org.apache.camel.test.spring.EnableRouteCoverage;
+import org.apache.camel.test.spring.MockEndpoints;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,23 +34,24 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(classes = camel.CamelRSSApplication.class)
+@MockEndpoints("log:*")
 @EnableRouteCoverage
 public class CamelRSSApplicationCNNTest {
 
     @Autowired
     private CamelContext camelContext;
 
-    @EndpointInject(uri="mock:latest_news")
-    private MockEndpoint mockEndpointLatest;
+    @EndpointInject(uri = "mock:log:cnn_latest")
+    private MockEndpoint mockLatestNews;
 
-    @EndpointInject(uri="mock:tech_news")
-    private MockEndpoint mockEndpointTechnology;
+    @EndpointInject(uri = "mock:log:cnn_sport")
+    private MockEndpoint mockSportNews;
 
-    @EndpointInject(uri="mock:sport_news")
-    private MockEndpoint mockEndpointSport;
+    @EndpointInject(uri = "mock:log:cnn_technology")
+    private MockEndpoint mockTechnologyNews;
 
     @Test
-    public void latestNews() throws Exception {
+    public void latestNewsFails() throws Exception {
 
         NotifyBuilder notify = new NotifyBuilder(camelContext)
                                     .from("CNN:latest")
@@ -58,7 +60,48 @@ public class CamelRSSApplicationCNNTest {
 
         // Introduce a timeout as a delay in case net too low
         notify.matches(5, TimeUnit.SECONDS);
+
         assertNotNull("Should be done", notify);
+        mockLatestNews.expectedMessagesMatches(ex -> !ex.getIn()
+                                                        .getBody(String.class)
+                                                        .contains("djsfhsdjfh"));
+        mockLatestNews.assertIsSatisfied();
+    }
+
+    @Test
+    public void latestNews() throws Exception {
+
+        NotifyBuilder notify = new NotifyBuilder(camelContext)
+                .from("CNN:latest")
+                .whenDone(2)
+                .create();
+
+        // Introduce a timeout as a delay in case net too low
+        notify.matches(5, TimeUnit.SECONDS);
+
+        assertNotNull("Should be done", notify);
+        mockLatestNews.expectedMessagesMatches(ex -> ex.getIn()
+                                                       .getBody(String.class)
+                                                       .contains("<item>"));
+        mockLatestNews.assertIsSatisfied();
+    }
+
+    @Test
+    public void sportNews() throws Exception {
+
+        NotifyBuilder notify = new NotifyBuilder(camelContext)
+                .from("CNN:sport")
+                .whenDone(2)
+                .create();
+
+        // Introduce a timeout as a delay in case net too low
+        notify.matches(5, TimeUnit.SECONDS);
+
+        assertNotNull("Should be done", notify);
+        mockSportNews.expectedMessagesMatches(ex -> ex.getIn()
+                                                       .getBody(String.class)
+                                                       .contains("<description>"));
+        mockSportNews.assertIsSatisfied();
     }
 
     @Test
@@ -71,20 +114,12 @@ public class CamelRSSApplicationCNNTest {
 
         // Introduce a timeout as a delay in case net too low
         notify.matches(5, TimeUnit.SECONDS);
+
         assertNotNull("Should be done", notify);
-    }
-
-    @Test
-    public void sportNews() throws Exception {
-
-        NotifyBuilder notify = new NotifyBuilder(camelContext)
-                                    .from("CNN:sport")
-                                    .whenDone(2)
-                                    .create();
-
-        // Introduce a timeout as a delay in case net too low
-        notify.matches(5, TimeUnit.SECONDS);
-        assertNotNull("Should be done", notify);
+        mockTechnologyNews.expectedMessagesMatches(ex -> ex.getIn()
+                                                           .getBody(String.class)
+                                                           .contains("<description>"));
+        mockTechnologyNews.assertIsSatisfied();
     }
 
 }

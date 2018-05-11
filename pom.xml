@@ -35,6 +35,8 @@
 
   <properties>
     <category>Beginner</category>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <spring-boot-version>1.5.12.RELEASE</spring-boot-version>
@@ -44,12 +46,12 @@
   <dependencies>
 
     <!-- Spring Boot -->
-    <!-- Camel -->
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring-boot-starter</artifactId>
       <version>${camel.version}</version>
     </dependency>
+    <!-- Camel -->
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-rss</artifactId>
