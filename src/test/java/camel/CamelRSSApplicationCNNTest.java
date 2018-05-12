@@ -47,9 +47,6 @@ public class CamelRSSApplicationCNNTest {
     @EndpointInject(uri = "mock:log:cnn_sport")
     private MockEndpoint mockSportNews;
 
-    @EndpointInject(uri = "mock:log:cnn_technology")
-    private MockEndpoint mockTechnologyNews;
-
     @Test
     public void latestNewsFails() throws Exception {
 
@@ -102,24 +99,6 @@ public class CamelRSSApplicationCNNTest {
                                                        .getBody(String.class)
                                                        .contains("<description>"));
         mockSportNews.assertIsSatisfied();
-    }
-
-    @Test
-    public void technologyNews() throws Exception {
-
-        NotifyBuilder notify = new NotifyBuilder(camelContext)
-                                    .from("CNN:technology")
-                                    .whenDone(2)
-                                    .create();
-
-        // Introduce a timeout as a delay in case net too low
-        notify.matches(5, TimeUnit.SECONDS);
-
-        assertNotNull("Should be done", notify);
-        mockTechnologyNews.expectedMessagesMatches(ex -> ex.getIn()
-                                                           .getBody(String.class)
-                                                           .contains("<description>"));
-        mockTechnologyNews.assertIsSatisfied();
     }
 
 }

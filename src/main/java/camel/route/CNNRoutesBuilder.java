@@ -33,9 +33,6 @@ public class CNNRoutesBuilder extends RouteBuilder {
         // Latest news RSS feed
         RssEndpoint endpointLatest =
                 endpoint("rss:http://rss.cnn.com/rss/cnn_latest.rss", RssEndpoint.class);
-        // Technology news RSS feed
-        RssEndpoint endpointTechnology =
-                endpoint("rss:http://rss.cnn.com/rss/edition_technology.rss", RssEndpoint.class);
         // Sport news RSS feed
         RssEndpoint endpointSport =
                 endpoint("rss:http://rss.cnn.com/rss/edition_sport.rss", RssEndpoint.class);
@@ -44,23 +41,15 @@ public class CNNRoutesBuilder extends RouteBuilder {
         from(endpointLatest).routeId("CNN:latest")
                             .streamCaching().threads(10)
                             .marshal().rss()
+                            .startupOrder(1)
                             .process(new CNNXmlProcessor())
-                            .to("log:cnn_latest")
-                            .end();
-
-        from(endpointTechnology).routeId("CNN:technology")
-                                .streamCaching().threads(5)
-                                .marshal().rss()
-                                .process(new CNNXmlProcessor())
-                                .to("log:cnn_technology")
-                                .end();
+                            .to("log:cnn_latest");
 
         from(endpointSport).routeId("CNN:sport")
                            .streamCaching().threads(5)
                            .marshal().rss()
-                           .process(new CNNXmlProcessor())
-                           .to("log:cnn_sport")
-                           .end();
+                           .startupOrder(2)
+                           .to("log:cnn_sport");
         // END SNIPPET: e1
     }
 

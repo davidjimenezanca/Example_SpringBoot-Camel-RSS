@@ -21,8 +21,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.12.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <version>1.5.3.RELEASE</version>
   </parent>
 
   <groupId>org.apache.camel.example.rss</groupId>
@@ -35,11 +34,11 @@
 
   <properties>
     <category>Beginner</category>
+    <java.version>1.8</java.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <spring-boot-version>1.5.12.RELEASE</spring-boot-version>
     <camel.version>2.21.0</camel.version>
   </properties>
 
@@ -51,10 +50,15 @@
       <artifactId>camel-spring-boot-starter</artifactId>
       <version>${camel.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
     <!-- Camel -->
+    <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-rss-starter -->
     <dependency>
       <groupId>org.apache.camel</groupId>
-      <artifactId>camel-rss</artifactId>
+      <artifactId>camel-rss-starter</artifactId>
       <version>${camel.version}</version>
     </dependency>
 
@@ -78,7 +82,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot-version}</version>
         <executions>
           <execution>
             <goals>
@@ -98,5 +101,20 @@
       </plugin>
     </plugins>
   </build>
+
+  <repositories>
+    <repository>
+      <id>spring-releases</id>
+      <name>Spring Releases</name>
+      <url>https://repo.spring.io/libs-release</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>spring-releases</id>
+      <name>Spring Releases</name>
+      <url>https://repo.spring.io/libs-release</url>
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>

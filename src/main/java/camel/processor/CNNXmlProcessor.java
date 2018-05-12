@@ -25,9 +25,9 @@ public class CNNXmlProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
-        exchange.getIn().getBody(String.class)
-                        .replaceAll(">\\s+<", "><")
-                        .trim();
+        String body = exchange.getIn().getBody(String.class);
+        body.replaceAll(">\\s+<", "><").trim();
+        System.out.println(body);
     }
 
 }
