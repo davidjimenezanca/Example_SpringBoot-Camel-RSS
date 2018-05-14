@@ -16,7 +16,6 @@
  */
 package camel.route;
 
-import camel.processor.CNNXmlProcessor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.rss.RssEndpoint;
 import org.springframework.stereotype.Component;
@@ -42,14 +41,25 @@ public class CNNRoutesBuilder extends RouteBuilder {
                             .streamCaching().threads(10)
                             .marshal().rss()
                             .startupOrder(1)
-                            .process(new CNNXmlProcessor())
-                            .to("log:cnn_latest");
+                            .process(exchange ->
+                                     System.out.println(exchange.getIn()
+                                                                .getBody(String.class)
+                                                                .replaceAll(">\\s+<", "><")
+                                                                .trim())
+                            )
+                            .to("log:cnn_latest").end();
 
         from(endpointSport).routeId("CNN:sport")
                            .streamCaching().threads(5)
                            .marshal().rss()
                            .startupOrder(2)
-                           .to("log:cnn_sport");
+                           .process(exchange ->
+                                    System.out.println(exchange.getIn()
+                                                               .getBody(String.class)
+                                                               .replaceAll(">\\s+<", "><")
+                                                               .trim())
+                            )
+                           .to("log:cnn_sport").end();
         // END SNIPPET: e1
     }
 

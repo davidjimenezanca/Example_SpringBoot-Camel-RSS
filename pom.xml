@@ -26,11 +26,11 @@
 
   <groupId>org.apache.camel.example.rss</groupId>
   <artifactId>springBoot</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Spring Boot :: Camel :: RSS Component :: Reactive Programming</name>
-  <description>An example showing how to work with Camel RSS (CNN news feed) Component, Spring Boot and AKKA-http</description>
+  <name>Spring Boot :: Camel :: RSS Component</name>
+  <description>An example showing how to work with Camel RSS (CNN news feed) Component</description>
 
   <properties>
     <category>Beginner</category>

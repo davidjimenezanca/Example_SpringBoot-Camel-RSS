@@ -14,7 +14,6 @@
     limitations under the License.
 -->
 <!-- Configures the Camel Context-->
-
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
@@ -26,10 +25,7 @@
         <routeBuilder ref="cnnRoutesBuilder"/>
     </camelContext>
 
-    <!-- this is our route -->
+    <!-- these are our routes -->
     <bean id="cnnRoutesBuilder" class="camel.route.CNNRoutesBuilder"/>
-
-    <!-- this is our processor -->
-    <bean id="cnnProcessor" class="camel.processor.CNNXmlProcessor"/>
 
 </beans>
