@@ -20,9 +20,6 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.rss.RssEndpoint;
 import org.springframework.stereotype.Component;
 
-/**
- * A simple example router demonstrating the camel-rss component.
- */
 @Component
 public class CNNRoutesBuilder extends RouteBuilder {
 
