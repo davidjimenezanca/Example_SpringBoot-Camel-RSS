@@ -11,7 +11,7 @@ Camel-rss internally uses a patched version of ROME hosted on ServiceMix to solv
 
 ### Prerequisites
 
-You will need to following to run this application:
+You will need following to run this application:
 
 - [Java 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - [Maven 2+](https://maven.apache.org/)
