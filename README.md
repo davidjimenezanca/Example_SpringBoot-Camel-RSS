@@ -29,3 +29,9 @@ Note: This is a console app
 
 - [Spring Boot website](https://projects.spring.io/spring-boot/)
 - [Apache Camel GitHub](https://github.com/apache/camel)
+
+
+# Author
+
+David Jiménez Anca : https://twitter.com/davidjimenezanc
+
