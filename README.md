@@ -33,5 +33,8 @@ Note: This is a console app
 
 # Author
 
-David Jiménez Anca : https://twitter.com/davidjimenezanc
+- David Jiménez Anca : https://twitter.com/davidjimenezanc
+- mailto: dvdancca@gmail.com
+- Upwork profile: https://www.upwork.com/fl/davidjimenez3
+
 
